@@ -1,8 +1,9 @@
 function solution(n, t) {
-    let i=0;
-    while(i<t){
-        n=n*2
-        i++
+    let count=1;
+    let answer=n;
+    while(count<=t){
+        answer*=2
+        count++
     }
-    return n
+    return answer
 }
