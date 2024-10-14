@@ -1,5 +1,3 @@
 function solution(n, k) {
-    let a=12000*n 
-    let b=(k-Math.floor(n/10))*2000
-    return a+b;
+    return (Math.floor(n / 10) >0) ? n*12000+ k*2000-Math.floor(n / 10)*2000 :  n*12000+ k*2000
 }
