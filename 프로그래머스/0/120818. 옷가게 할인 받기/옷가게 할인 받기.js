@@ -1,12 +1,9 @@
 function solution(price) {
-    let a=100000
-    let b=300000
-    let c=500000
-    if(price>=c){
+    if(price>=500000){
         return Math.floor(price*0.8)
-    }else if(price>=b){
+    }else if(price >=300000){
         return Math.floor(price*0.9)
-    }else if(price>=a){
+    }else if(price >=100000){
         return Math.floor(price*0.95)
     }else{
         return price
