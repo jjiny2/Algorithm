@@ -1,20 +1,17 @@
 function solution(s){
-    let upper=s.toUpperCase();
-    let p=0
-    let y=0
-    for(let i=0; i<upper.length; i++){
-        if(upper[i]=='P'){
-            p++
-        }else if(upper[i]=='Y'){
-            y++
+    let pc=0;
+    let yc=0;
+    let test=s.toUpperCase()
+    for(let i=0; i<test.length; i++){
+        if(test[i] === "P"){
+            pc++
+        }else if(test[i] === "Y"){
+            yc++
         }
     }
-    if(p == y){
+    if(pc  === yc){
         return true
-    }else{
+    }else if(pc != yc){
         return false
     }
-
-    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    console.log(p, y)
 }
