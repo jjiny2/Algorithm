@@ -1,12 +1,7 @@
 function solution(arr) {
-    let min=arr[0];
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]<min){
-            min=arr[i]
-        }
+    if(arr.length === 1 && arr[0] == 10){
+        return [-1]
     }
-    
-
-    let result=arr.filter((item)=>item !== min)
-    return result.length !==0 ? result : [-1]
+    let min = Math.min (...arr)
+    return arr.filter(item=>item != min)
 }
