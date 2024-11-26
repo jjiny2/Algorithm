@@ -1,0 +1,13 @@
+-- 코드를 입력하세요
+SELECT B.APNT_NO,C.PT_NAME, B.PT_NO, B.MCDP_CD, A.DR_NAME, B.APNT_YMD
+    FROM 
+        DOCTOR AS A 
+    JOIN 
+        APPOINTMENT AS B ON A.DR_ID = B.MDDR_ID
+    JOIN 
+        PATIENT AS C ON B.PT_NO = C.PT_NO
+    WHERE A.MCDP_CD = "CS" AND
+        B.APNT_CNCL_YN ="N" AND
+        DATE_FORMAT(B.APNT_YMD,"%Y-%m-%d")= "2022-04-13"
+    ORDER BY B.APNT_YMD 
+    
