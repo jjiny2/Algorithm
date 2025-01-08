@@ -1,11 +1,11 @@
--- 코드를 작성해주세요
-SELECT A.ID, B.FISH_NAME, A.LENGTH
-    FROM FISH_INFO AS A JOIN FISH_NAME_INFO AS B
-        ON A.FISH_TYPE = B.FISH_TYPE
-    WHERE A.LENGTH >10 
-        AND A.LENGTH =(
-            SELECT MAX(LENGTH)
-            FROM FISH_INFO AS A1 
-            WHERE A1.FISH_TYPE = A.FISH_TYPE
-        )
-    ORDER BY A.ID
+SELECT A.ID, B.FISH_NAME, A.LENGTH 
+    from FISH_INFO as A join
+        FISH_NAME_INFO as B 
+        on A.FISH_TYPE=B.FISH_TYPE
+    WHERE A.LENGTH > 10 
+        AND A.LENGTH = (
+        SELECT MAX(LENGTH)
+            FROM FISH_INFO
+            WHERE FISH_TYPE = A.FISH_TYPE
+    )
+    ORDER BY A.ID 
