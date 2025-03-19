@@ -34,3 +34,4 @@ GROUP BY
     hours.HOUR
 ORDER BY 
     hours.HOUR;
+    
